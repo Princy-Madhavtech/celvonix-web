@@ -5,7 +5,6 @@ import Navbar from './component/global/Navbar';
 function App() {
   return (
    <>
-   <Navbar/>
    <HomeIndex/>
    </>
   );
