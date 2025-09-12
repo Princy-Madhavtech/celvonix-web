@@ -10,6 +10,7 @@ module.exports = {
         primary: {
           100: "#64FF0A", // nion green
           200: "#242529", // dark grey
+          300: "#55E600", // hover nion green
         },
         white: {
           100: "#FFFFFF"
