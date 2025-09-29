@@ -46,7 +46,7 @@ const AboutSection = () => {
           </div> */}
 
           {/* Main Heading */}
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-snug">
+          <h2 className="text-4xl lg:text-5xl font-bold leading-snug">
             Empowering the World with
             <span className="text-primary-100"> Renewable Energy</span>
           </h2>

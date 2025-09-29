@@ -6,6 +6,19 @@ import { FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6"; // X (Twitter new logo)
 
 const Footer = () => {
+  const menuItems = [
+    { key: "", label: "Home" },
+    { key: "about", label: "About" },
+    { key: "contact", label: "Contact Us" },
+    { key: "industries", label: "Industries" },
+  ];
+
+  const industriesItems = [
+    { key: "storage", label: "Electric Storage" },
+    { key: "vehicle", label: "Electric Vehicle" },
+    { key: "device", label: "Electric Device" },
+  ];
+
   return (
     <footer
       className="relative text-white overflow-hidden py-16 px-6 lg:px-24 bg-cover bg-center"
@@ -61,26 +74,38 @@ const Footer = () => {
         {/* Middle row */}
         <div className="flex items-center justify-between pt-4">
           <img src={Logo} alt="Logo" className="h-10 w-auto" />
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
-            <NavLink to="/ai-plant-care" className="hover:text-primary-100 transition">
-              AI Plant Care
-            </NavLink>
-            <NavLink to="/health-care" className="hover:text-primary-100 transition">
-              Health Care
-            </NavLink>
-            <NavLink to="/privacy-policy" className="hover:text-primary-100 transition">
-              Privacy Policy
-            </NavLink>
-            <NavLink to="/terms" className="hover:text-primary-100 transition">
-              Terms & Conditions
-            </NavLink>
-            <NavLink to="/sitemap" className="hover:text-primary-100 transition">
-              Sitemap
-            </NavLink>
-            <NavLink to="/career" className="hover:text-primary-100 transition">
-              Career
-            </NavLink>
-          </div>
+          <nav className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
+            {menuItems.map((item) =>
+              item.key === "industries" ? (
+                <div key={item.key} className="relative group">
+                  <span className="text-gray-300 font-semibold group-hover:text-primary-100 cursor-default">
+                    {item.label}
+                  </span>
+                  <div className="absolute top-full left-0 mt-2 w-40 rounded-lg bg-black/50 backdrop-blur-md border border-white/20 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="py-2">
+                      {industriesItems.map((sub) => (
+                        <NavLink
+                          key={sub.key}
+                          to={`/industries/${sub.key}`}
+                          className="block px-4 py-2 text-gray-200 hover:text-primary-100 hover:bg-white/10"
+                        >
+                          {sub.label}
+                        </NavLink>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <NavLink
+                  key={item.key}
+                  to={`/${item.key}`}
+                  className="hover:text-primary-100 transition"
+                >
+                  {item.label}
+                </NavLink>
+              )
+            )}
+          </nav>
         </div>
 
         {/* Bottom row */}
