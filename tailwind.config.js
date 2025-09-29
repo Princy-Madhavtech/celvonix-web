@@ -17,7 +17,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Roboto", "Open Sans", "sans-serif"],
+        sans: ['Jost', "Roboto", "Open Sans", "sans-serif"],
         serif: ['"DM Serif Text"', "serif"],
       },
       backgroundImage: {

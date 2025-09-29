@@ -65,7 +65,7 @@ const Navbar = () => {
         </span>
 
         {/* Dropdown Menu */}
-        <div className="absolute right-2 mt-2 w-40 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+        <div className="absolute right-2 mt-2 w-40 rounded-lg bg-black/50 backdrop-blur-md border border-white/20 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
           {industriesItems.map((sub) => (
             <NavLink
               key={sub.key}
