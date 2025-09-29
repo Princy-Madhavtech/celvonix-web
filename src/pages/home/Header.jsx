@@ -1,55 +1,70 @@
-import React from 'react'
-import Navbar from '../../component/global/Navbar'
+import React from "react";
+import Hero from "../../images/cel2.png";
+import { GiElectric } from "react-icons/gi";
+
 
 const Header = () => {
   return (
-    <div>
-      <Navbar/>
+    <section className="relative w-full min-h-screen bg-black text-white flex flex-col items-center justify-start overflow-hidden">
+      {/* Background Gradient from Bottom */}
+      <div className="absolute inset-0 z-0">
+        {/* Main bottom gradient glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[60vh] bg-gradient-to-t from-[#64FF0A]/15 via-[#55E600]/8 to-transparent"></div>
+        
+        {/* Intense bottom center glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#64FF0A]/20 blur-[150px] rounded-full"></div>
+        
+        {/* Secondary softer glow */}
+        <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#55E600]/15 blur-[120px] rounded-full"></div>
+      </div>
 
-      {/* Hero Section */}
-      <section
-        className="relative w-full bg-cover bg-center bg-no-repeat min-h-[520px] md:min-h-[650px] lg:min-h-[750px] flex items-start md:items-center"
-        style={{ backgroundImage: "url('/assets/home.png')" }}
-      >
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="container relative z-10 py-12 md:py-16 lg:py-24">
-          <div className="max-w-3xl text-white">
-            <p className="uppercase tracking-widest text-[10px] text-white-100 md:text-xs text-primary-100 mb-4 md:mb-6 flex items-center">
-              <img src="/assets/small_logo.png" alt="Celvonix" className="mr-2" />
-              CUTTING-EDGE ELECTRICAL SOLUTIONS
-            </p>
-            <h1 className="text-white-100 text-3xl sm:text-5xl md:text-6xl leading-tight mb-5 md:mb-6">
-              Unleash The Power
-              <br />
-              of Clean Energy!
-            </h1>
-            <p className="text-gray-400 mb-6 md:mb-8 max-w-xl text-sm md:text-base">
-              The future of energy is clean, smart, and sustainable—and at CELVONIX, we're leading the charge. Say goodbye to high.
-            </p>
-            <button className="bg-primary-100 text-black font-semibold px-6 py-3 rounded hover:bg-primary-300 transition inline-flex items-center w-full sm:w-auto justify-center">
-              Explore Our Solutions
-              <span className="ml-2">↗</span>
-            </button>
+      {/* Content on Top */}
+      <div className="relative z-10 text-center max-w-3xl px-6 pt-20 md:pt-28">
+        {/* Small Tagline */}
+        <div className="inline-flex items-center bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm mb-6 backdrop-blur-sm">
+  Simplify your workflow 
+  <GiElectric className="text-primary-100 ml-1" size={20}/>
+</div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-10 md:mt-12 text-left">
-              <div>
-                <div className="text-xl md:text-2xl font-extrabold text-white">1500+</div>
-                <div className="text-gray-400 text-xs md:text-sm">Projects Completed</div>
-              </div>
-              <div>
-                <div className="text-xl md:text-2xl font-extrabold text-white">750+</div>
-                <div className="text-gray-400 text-xs md:text-sm">Happy Customer</div>
-              </div>
-              <div>
-                <div className="text-xl md:text-2xl font-extrabold text-white">98%</div>
-                <div className="text-gray-400 text-xs md:text-sm">Satisfied Customer</div>
-              </div>
-            </div>
-          </div>
+
+        {/* Title */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+          Enhance your financial <br /> control with{" "}
+          <span className="text-[#64FF0A]">CELVONIX</span>
+        </h1>
+
+        {/* Subtext */}
+        <p className="text-gray-300 text-base md:text-lg mb-8">
+          Streamline your business's financial management with our intuitive,
+          scalable SaaS platform. Designed for enterprises.
+        </p>
+
+        {/* CTA */}
+        <button className="bg-primary-100 hover:bg-primary-100 text-black font-semibold px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:shadow-[0_0_30px_rgba(100,255,10,0.5)]">
+          Get Started
+        </button>
+      </div>
+
+      {/* Image with enhanced glow */}
+      <div className="relative w-full flex justify-center mt-12 pb-0 z-10">
+        {/* Image container with glow effect */}
+        <div className="relative">
+          {/* Glow behind image */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-[#64FF0A]/20 blur-[150px] rounded-full -z-10"></div>
+          
+          {/* Image */}
+          <img
+            src={Hero}
+            alt="Dashboard Preview"
+            className="h-[50vh] max-w-full rounded-t-3xl relative "
+          />
         </div>
-      </section>
-    </div>
-  )
-}
+      </div>
 
-export default Header
+      {/* Bottom fade to next section */}
+      <div className="absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-black to-transparent z-5"></div>
+    </section>
+  );
+};
+
+export default Header;

@@ -26,4 +26,60 @@ code {
     monospace;
 }
 
+.contact-border {
+  border: 1px solid transparent;
+  border-image-source: radial-gradient(
+      98% 49.86% at 100.03% 50%,
+      #ffffff 0%,
+      rgba(229, 241, 248, 0.05) 100%
+    ),
+    radial-gradient(
+      24.21% 39.21% at 0% 0%,
+      rgba(255, 255, 255, 0.81) 0%,
+      rgba(255, 255, 255, 0.19) 100%
+    );
+  backdrop-filter: blur(80px);
+  background: linear-gradient(
+    150.87deg,
+    rgba(255, 255, 255, 0.4) 2.71%,
+    rgba(255, 255, 255, 0) 85.59%
+  );
+  border-radius: 0.5rem;
+}
+
+
+.font-color{
+  background: linear-gradient(99.67deg, #02176C 0.22%, #0076B6 101.28%);
+}
+
+.text-gradient {
+  background: linear-gradient(99.67deg, #0072B3 0.22%, #01408C 101.28%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback for browsers that do not support background-clip */
+}
+
+.custom-border {
+  border: 1px solid;
+  border-image-source: radial-gradient(
+      98% 49.86% at 100.03% 100%,
+      #ffffff 0%,
+      rgba(229, 241, 248, 0.05) 100%
+    ),
+    radial-gradient(
+      24.21% 39.21% at 0% 0%,
+      rgba(255, 255, 255, 0.81) 0%,
+      rgba(255, 255, 255, 0.19) 100%
+    );
+  backdrop-filter: blur(80px);
+  background: linear-gradient(
+    105.87deg,
+    rgba(255, 255, 255, 0.4) 2.71%,
+    rgba(255, 255, 255, 0) 85.59%
+  );
+}
+
+/* fo
+ */
 
