@@ -4,6 +4,7 @@ import Contact2 from "../../images/contact2.png";
 import Contact3 from "../../images/contact3.png";
 import PageHeader from "../../component/global/PageHeader";
 import ContactSection from "./ContactSection";
+import ContactCard from "../home/ContactCard";
 const ContactIndex = () => {
   return (
     <>
@@ -49,6 +50,11 @@ const ContactIndex = () => {
         </div>
       </div>
       <ContactSection />
+      <div className="bg-black">
+      <ContactCard/>
+      </div>
+      
+     
     </>
   );
 };
