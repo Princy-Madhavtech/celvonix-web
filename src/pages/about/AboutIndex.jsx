@@ -2,6 +2,7 @@ import React from 'react'
 import PageHeader from '../../component/global/PageHeader'
 import AboutSection from '../home/AboutSection'
 import AboutJobs from './Vision'
+import ContactCard from "../home/ContactCard"
 const AboutIndex = () => {
   return (
     <div className='bg-black'>
@@ -9,6 +10,7 @@ const AboutIndex = () => {
       {/* <AboutScreen/> */}
       <AboutSection />
       <AboutJobs/>
+      <ContactCard/>
     </div>
   )
 }

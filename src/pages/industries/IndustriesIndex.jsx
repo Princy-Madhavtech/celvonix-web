@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PageHeader from "../../component/global/PageHeader";
+
+import ContactCard from "../home/ContactCard"
 import Pro from "../../images/11.png";
 import Cabinet from "../../images/Cabinet.png";
 import Storage from "../../images/Storage.webp";
@@ -8,7 +10,6 @@ import Inverter from "../../images/Inverter.webp";
 import Battery from "../../images/Battery.webp";
 import Bus from "../../images/Bus.webp";
 import Battery2 from "../../images/Battery2.jpeg";
-
 import Forklifts from "../../images/Forklifts.jpg";
 import Heavy from "../../images/Heavy.webp";
 import Underground from "../../images/Underground.jpg";
@@ -356,6 +357,7 @@ const IndustriesIndex = () => {
           </div>
         ))}
       </div>
+      <ContactCard/>
 
     </div>
   );
